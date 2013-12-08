@@ -1,8 +1,8 @@
 <?php
 /*
-	Plugin Name: TYPO3 Importer
+	Plugin Name: TYPO3 Importer by Aihrus
 	Plugin URI: http://wordpress.org/extend/plugins/typo3-importer/
-	Description: Import tt_news and tx_comments from TYPO3 into WordPress.
+	Description: TYPO3 Importer by Aihrus easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
 	Version: 2.2.2
 	Author: Michael Cannon
 	Author URI: http://aihr.us/about-aihrus/michael-cannon-resume/
