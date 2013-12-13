@@ -164,7 +164,7 @@ Inline and related images will be added to the Media Library. The first image fo
 	* Select plugins for update, click "Update Plugins"
 * Using FTP
 	* Download and unzip [`typo3-importer.zip`](http://downloads.wordpress.org/plugin/typo3-importer.zip) locally
-	* FTP, upload directory `typo3-importer` to your website's `/wp-content/plugins/` directory
+	* Upload directory `typo3-importer` to your website's `/wp-content/plugins/` directory
 	* Be sure to overwrite your existing `typo3-importer` folder contents
 
 
