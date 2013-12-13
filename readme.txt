@@ -15,7 +15,7 @@ TYPO3 Importer by Aihrus easily imports thousands of tt_news and tx_comments fro
 
 TYPO3 Importer [by Aihrus](http://aihr.us/about-aihrus/) brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
 
-Inline and related images will be added to the Media Library. The first image found is optionally set as the Featured Image for the post. Inline images will have their source URLs updated. If there's more than one related image, the [gallery] shortcode is optionally inserted into the post.
+Inline and related images will be added to the Media Library. The first image found is optionally set as the Featured Image for the post. Inline images will have their source URLs updated. If there's more than one related image, the [ gallery] shortcode is optionally inserted into the post.
 
 * Requires remote web and database access to the source TYPO3 instance.
 * Comments will be tested for spam via Askimet if you have Askimet configured.
@@ -130,6 +130,10 @@ Inline and related images will be added to the Media Library. The first image fo
 
 == Installation ==
 
+= Requirements =
+
+* TBD
+
 = Install Methods =
 
 * Through WordPress Admin > Plugins > Add New, Search for "TYPO3 Importer"
@@ -143,7 +147,7 @@ Inline and related images will be added to the Media Library. The first image fo
 * Download and unzip [`typo3-importer.zip`](http://downloads.wordpress.org/plugin/typo3-importer.zip) locally
 	* Using FTP, upload directory `typo3-importer` to your website's `/wp-content/plugins/` directory
 
-= Activatation Options =
+= Activation Options =
 
 * Activate the "TYPO3 Importer" plugin after uploading
 * Activate the "TYPO3 Importer" plugin through WordPress Admin > Plugins
