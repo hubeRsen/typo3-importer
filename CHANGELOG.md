@@ -4,6 +4,7 @@
 * Add CHANGELOG and CONTRIBUTING documents
 * Convert TODO to https://github.com/michael-cannon/typo3-importer/issues
 * Revise readme structure
+* Specify a “Text Domain” and “Domain Path”
 * Update POT
 
 ## 2.2.2
