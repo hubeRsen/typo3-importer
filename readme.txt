@@ -208,3 +208,8 @@ See [CHANGELOG](https://github.com/michael-cannon/typo3-importer/blob/master/CHA
 == Notes ==
 
 TBD
+
+
+== Thank You ==
+
+Current development by [Michael Cannon](https://profiles.wordpress.org/comprock/) of [Aihrus](http://aihr.us/about-aihrus/).
