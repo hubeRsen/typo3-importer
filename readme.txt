@@ -1,4 +1,4 @@
-=== TYPO3 Importer by Axelerant ===
+=== TYPO3 Importer ===
 
 Contributors: comprock
 Tags: typo3, import
@@ -8,11 +8,11 @@ Stable tag: 2.3.0RC1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-TYPO3 Importer by Axelerant easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
+TYPO3 Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
 
 == Description ==
 
-TYPO3 Importer [by Axelerant](http://axelerant.com/about-axelerant/) brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
+TYPO3 Importer brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
 
 Inline and related images will be added to the Media Library. The first image found is optionally set as the Featured Image for the post. Inline images will have their source URLs updated. If there's more than one related image, the [ gallery] shortcode is optionally inserted into the post.
 
@@ -176,6 +176,7 @@ Inline and related images will be added to the Media Library. The first image fo
 
 = Still Stuck or Want Something Done? Get Support! =
 
+1. [TYPO3 Importer Knowledge Base](https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs) - read and comment upon frequently asked questions
 1. [Open TYPO3 Importer Issues](https://github.com/michael-cannon/typo3-importer/issues) - review and submit bug reports and enhancement requests
 1. [TYPO3 Importer Support on WordPress](http://wordpress.org/support/plugin/typo3-importer) - ask questions and review responses
 1. [Contribute Code to TYPO3 Importer](https://github.com/michael-cannon/typo3-importer/blob/master/CONTRIBUTING.md)
