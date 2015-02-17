@@ -1,18 +1,18 @@
 <?php
 /**
- * Plugin Name: TYPO3 Importer by Aihrus
+ * Plugin Name: TYPO3 Importer
  * Plugin URI: http://wordpress.org/extend/plugins/typo3-importer/
- * Description: TYPO3 Importer by Aihrus easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
- * Version: 2.2.2
- * Author: Michael Cannon
- * Author URI: http://aihr.us/about-aihrus/michael-cannon-resume/
+ * Description: TYPO3 Importer by Axelerant easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
+ * Version: 2.3.0RC1
+ * Author: Axelerant
+ * Author URI: http://axelerant.com/
  * License: GPLv2 or later
  * Text Domain: typo3-importer
  * Domain Path: /languages
  */
 
 /**
-	Copyright 2013  Michael Cannon  (email : mc@aihr.us)
+	Copyright 2015 Axelerant  (email: info@axelerant.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as 

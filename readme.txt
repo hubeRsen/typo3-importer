@@ -1,19 +1,18 @@
-=== TYPO3 Importer by Aihrus ===
+=== TYPO3 Importer by Axelerant ===
 
 Contributors: comprock
-Donate link: http://aihr.us/about-aihrus/donate/
 Tags: typo3, import
 Requires at least: 3.5
 Tested up to: 3.5
-Stable tag: 2.2.2
+Stable tag: 2.3.0RC1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-TYPO3 Importer by Aihrus easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
+TYPO3 Importer by Axelerant easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
 
 == Description ==
 
-TYPO3 Importer [by Aihrus](http://aihr.us/about-aihrus/) brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
+TYPO3 Importer [by Axelerant](http://axelerant.com/about-axelerant/) brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
 
 Inline and related images will be added to the Media Library. The first image found is optionally set as the Featured Image for the post. Inline images will have their source URLs updated. If there's more than one related image, the [ gallery] shortcode is optionally inserted into the post.
 
@@ -137,8 +136,8 @@ Inline and related images will be added to the Media Library. The first image fo
 = Install Methods =
 
 * Through WordPress Admin > Plugins > Add New, Search for "TYPO3 Importer"
-	* Find "TYPO3 Importer by Aihrus"
-	* Click "Install Now" of "TYPO3 Importer by Aihrus"
+	* Find "TYPO3 Importer"
+	* Click "Install Now" of "TYPO3 Importer"
 * Download [`typo3-importer.zip`](http://downloads.wordpress.org/plugin/typo3-importer.zip) locally
 	* Through WordPress Admin > Plugins > Add New
 	* Click Upload
@@ -172,16 +171,15 @@ Inline and related images will be added to the Media Library. The first image fo
 
 = Most Common Issues =
 
-* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Aihrus Plugins Require PHP 5.3+](https://aihrus.zendesk.com/entries/30678006) for the fixes.
-* [Debug common theme and plugin conflicts](https://aihrus.zendesk.com/entries/25119302)
+* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Axelerant Plugins Require PHP 5.3+](https://nodedesk.zendesk.com/hc/en-us/articles/202331041) for the fixes.
+* [Debug common theme and plugin conflicts](https://nodedesk.zendesk.com/hc/en-us/articles/202330781)
 
 = Still Stuck or Want Something Done? Get Support! =
 
-1. [TYPO3 Importer Knowledge Base](https://aihrus.zendesk.com/categories/20134788) - read and comment upon frequently asked questions
 1. [Open TYPO3 Importer Issues](https://github.com/michael-cannon/typo3-importer/issues) - review and submit bug reports and enhancement requests
 1. [TYPO3 Importer Support on WordPress](http://wordpress.org/support/plugin/typo3-importer) - ask questions and review responses
 1. [Contribute Code to TYPO3 Importer](https://github.com/michael-cannon/typo3-importer/blob/master/CONTRIBUTING.md)
-1. [Beta Testers Needed](http://aihr.us/become-beta-tester/) - get the latest TYPO3 Importer version
+1. [Beta Testers Needed](http://axelerant.com/become-beta-tester/) - get the latest TYPO3 Importer version
 
 
 == Screenshots ==
@@ -212,4 +210,4 @@ TBD
 
 == Thank You ==
 
-Current development by [Michael Cannon](https://profiles.wordpress.org/comprock/) of [Aihrus](http://aihr.us/about-aihrus/).
+Current development by [Michael Cannon](https://profiles.wordpress.org/comprock/) of [Axelerant](http://axelerant.com/about-axelerant/).

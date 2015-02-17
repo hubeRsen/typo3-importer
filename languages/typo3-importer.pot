@@ -740,5 +740,5 @@ msgid "Michael Cannon"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://aihr.us/about-aihrus/michael-cannon-resume/"
+msgid "http://axelerant.com/about-axelerant/michael-cannon-resume/"
 msgstr ""

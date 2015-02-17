@@ -1,5 +1,9 @@
 # CHANGELOG TYPO3 Importer
 
+## 2.3.0RC1
+* Change brand name
+* Change copyright text
+
 ## master
 * Add CHANGELOG and CONTRIBUTING documents
 * Convert TODO to https://github.com/michael-cannon/typo3-importer/issues
