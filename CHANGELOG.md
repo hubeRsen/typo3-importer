@@ -1,4 +1,4 @@
-# CHANGELOG TYPO3 Importer
+# CHANGELOG TYPO3 tt_news Importer
 
 ## 2.3.0RC1
 * Change brand name
@@ -60,7 +60,7 @@
 * Update TODOs
 * Import meta keywords and descriptions for All in One SEO, Bizz themes, Headspace2, Thesis and Yoast's WordPress SEO
 * Update Options > Settings verbiage
-* Update TYPO3 Importer verbiage
+* Update TYPO3 tt_news Importer verbiage
 * Set default author
 * Enable debug mode to handle news_to_import directly for testing purposes 
 * Ignore file:// sources, they're none existant except on original computer
@@ -96,7 +96,7 @@
 * Update Changelog
 
 ## 1.0.0
-* Update TYPO3 Importer settings screenshot
+* Update TYPO3 tt_news Importer settings screenshot
 * update CHANGELOG
 * Add force_private_posts(), Great for when you accidentially push imports live, but didn't mean to;
 * Remove excess options labels

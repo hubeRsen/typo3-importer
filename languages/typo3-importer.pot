@@ -1,8 +1,8 @@
-# Copyright (C) 2013 TYPO3 Importer
-# This file is distributed under the same license as the TYPO3 Importer package.
+# Copyright (C) 2013 TYPO3 tt_news Importer
+# This file is distributed under the same license as the TYPO3 tt_news Importer package.
 msgid ""
 msgstr ""
-"Project-Id-Version: TYPO3 Importer 2.2.2\n"
+"Project-Id-Version: TYPO3 tt_news Importer 2.2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/typo3-importer\n"
 "POT-Creation-Date: 2013-04-08 17:57:57+00:00\n"
 "MIME-Version: 1.0\n"
@@ -37,19 +37,19 @@ msgid "Reset/Restore"
 msgstr ""
 
 #: settings.typo3-importer.php:33
-msgid "About TYPO3 Importer"
+msgid "About TYPO3 tt_news Importer"
 msgstr ""
 
 #: settings.typo3-importer.php:51 settings.typo3-importer.php:111
 #: typo3-importer.php:107
-msgid "TYPO3 Importer Settings"
+msgid "TYPO3 tt_news Importer Settings"
 msgstr ""
 
-#. #-#-#-#-#  typo3-importer.pot (TYPO3 Importer 2.2.2)  #-#-#-#-#
+#. #-#-#-#-#  typo3-importer.pot (TYPO3 tt_news Importer 2.2.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: settings.typo3-importer.php:51 settings.typo3-importer.php:58
 #: typo3-importer.php:102 typo3-importer.php:147
-msgid "TYPO3 Importer"
+msgid "TYPO3 tt_news Importer"
 msgstr ""
 
 #: settings.typo3-importer.php:73

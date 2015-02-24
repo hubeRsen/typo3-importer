@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TYPO3 Importer settings class
+ * TYPO3 tt_news Importer settings class
  *
  * @ref http://alisothegeek.com/2011/01/wordpress-settings-api-tutorial-1/
  */
@@ -30,7 +30,7 @@ class T3I_Settings {
 		$this->sections['oops']		= __( 'Oops…', 'typo3-importer');
 		$this->sections['reset']	= __( 'Reset/Restore', 'typo3-importer');
 		// $this->sections['TBI']		= __( 'Not Implemented', 'typo3-importer');
-		$this->sections['about']	= __( 'About TYPO3 Importer', 'typo3-importer');
+		$this->sections['about']	= __( 'About TYPO3 tt_news Importer', 'typo3-importer');
 		
 		add_action( 'admin_menu', array( &$this, 'add_pages' ) );
 		add_action( 'admin_init', array( &$this, 'register_settings' ) );
@@ -48,14 +48,14 @@ class T3I_Settings {
 	 */
 	public function add_pages() {
 		
-		$admin_page = add_options_page( __( 'TYPO3 Importer Settings', 'typo3-importer'), __( 'TYPO3 Importer', 'typo3-importer'), 'manage_options', 't3i-options', array( &$this, 'display_page' ) );
+		$admin_page = add_options_page( __( 'TYPO3 tt_news Importer Settings', 'typo3-importer'), __( 'TYPO3 tt_news Importer', 'typo3-importer'), 'manage_options', 't3i-options', array( &$this, 'display_page' ) );
 		
 		add_action( 'admin_print_scripts-' . $admin_page, array( &$this, 'scripts' ) );
 		add_action( 'admin_print_styles-' . $admin_page, array( &$this, 'styles' ) );
 
 		add_screen_meta_link(
         	'typo3-importer-link',
-			__('TYPO3 Importer', 'typo3-importer'),
+			__('TYPO3 tt_news Importer', 'typo3-importer'),
 			admin_url('tools.php?page=typo3-importer'),
 			$admin_page,
 			array('style' => 'font-weight: bold;')
@@ -108,7 +108,7 @@ class T3I_Settings {
 		
 		echo '<div class="wrap">
 	<div class="icon32" id="icon-options-general"></div>
-	<h2>' . __( 'TYPO3 Importer Settings', 'typo3-importer') . '</h2>';
+	<h2>' . __( 'TYPO3 tt_news Importer Settings', 'typo3-importer') . '</h2>';
 	
 		echo '<form action="options.php" method="post">';
 	
@@ -206,7 +206,7 @@ EOD;
 		
 		echo					<<<EOD
 			<div style="width: 50%;">
-				<p><img class="alignright size-medium" title="Michael in Red Square, Moscow, Russia" src="/wp-content/plugins/typo3-importer/media/michael-cannon-red-square-300x2251.jpg" alt="Michael in Red Square, Moscow, Russia" width="300" height="225" /><a href="http://wordpress.org/extend/plugins/typo3-importer/">TYPO3 Importer</a> is by <a href="http://axelerant.com/about-axelerant/michael-cannon-resume/">Michael Cannon</a>.</p>
+				<p><img class="alignright size-medium" title="Michael in Red Square, Moscow, Russia" src="/wp-content/plugins/typo3-importer/media/michael-cannon-red-square-300x2251.jpg" alt="Michael in Red Square, Moscow, Russia" width="300" height="225" /><a href="http://wordpress.org/extend/plugins/typo3-importer/">TYPO3 tt_news Importer</a> is by <a href="http://axelerant.com/about-axelerant/michael-cannon-resume/">Michael Cannon</a>.</p>
 				<p>Hello, I'm Michael Cannon, <a title="Lot's of stuff about Peichi Liu…" href="http://peimic.com/t/peichi-liu/">Peichi's</a> smiling man, an adventurous <a title="Water rat" href="http://www.chinesehoroscope.org/chinese_zodiac/rat/" target="_blank">water-rat</a>, <a title="Aihrus – ideas programmed real" href="http://aihr.us/">CTO</a>, <a title="Road biker, cyclist, biking; whatever you call, I love to ride" href="http://peimic.com/c/biking/">cyclist</a>, <a title="Michael's poetic like literary ramblings" href="http://peimic.com/t/poetry/">poet</a>, <a title="World Wide Opportunities on Organic Farms" href="http://peimic.com/t/WWOOF/">WWOOF'er</a> and <a title="My traveled to country list, is more than my age." href="http://peimic.com/c/travel/">world traveler</a>.</p>
 				<p>If you like this plugin, <a href="http://axelerant.com/about-axelerant/donate/">please donate</a>.</p>
 			</div>

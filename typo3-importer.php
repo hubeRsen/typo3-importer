@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TYPO3 tt_news Importer
  * Plugin URI: http://wordpress.org/extend/plugins/typo3-importer/
- * Description: TYPO3 Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
+ * Description: TYPO3 tt_news Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
  * Version: 2.3.0RC1
  * Author: Axelerant
  * Author URI: http://axelerant.com/
@@ -39,7 +39,7 @@ require_once( 'screen-meta-links.php' );
 
 
 /**
- * TYPO3 Importer
+ * TYPO3 tt_news Importer
  *
  * @package typo3-importer
  */
@@ -103,12 +103,12 @@ class TYPO3_Importer {
 
 	// Register the management page
 	function add_admin_menu() {
-		$this->menu_id = add_management_page( __( 'TYPO3 Importer', 'typo3-importer' ), __( 'TYPO3 Importer', 'typo3-importer' ), 'manage_options', 'typo3-importer', array(&$this, 'user_interface') );
+		$this->menu_id = add_management_page( __( 'TYPO3 tt_news Importer', 'typo3-importer' ), __( 'TYPO3 tt_news Importer', 'typo3-importer' ), 'manage_options', 'typo3-importer', array(&$this, 'user_interface') );
 
 		add_action( 'admin_print_styles-' . $this->menu_id, array( &$this, 'styles' ) );
         add_screen_meta_link(
         	't3i-options-link',
-			__('TYPO3 Importer Settings', 'typo3-importer'),
+			__('TYPO3 tt_news Importer Settings', 'typo3-importer'),
 			admin_url('options-general.php?page=t3i-options'),
 			$this->menu_id,
 			array('style' => 'font-weight: bold;')
@@ -148,7 +148,7 @@ class TYPO3_Importer {
 	<div class="icon32" id="icon-tools"></div>
 	<h2>
 EOD;
-	_e('TYPO3 Importer', 'typo3-importer');
+	_e('TYPO3 tt_news Importer', 'typo3-importer');
 	echo '</h2>';
 
 		if ( get_t3i_options( 'debug_mode' ) ) {

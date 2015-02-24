@@ -1,4 +1,4 @@
-=== TYPO3 Importer ===
+=== TYPO3 tt_news Importer ===
 
 Contributors: comprock, saurabhd
 Tags: typo3, import
@@ -8,11 +8,11 @@ Stable tag: 2.3.0RC1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-TYPO3 Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
+TYPO3 tt_news Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
 
 == Description ==
 
-TYPO3 Importer brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
+TYPO3 tt_news Importer brings your TYPO3 news, related media and comments into WordPress with minimal fuss. You can be as selective or open as you'd like for selecting which tt_news records to grab. Import can be interrupted and restarted later on.
 
 Inline and related images will be added to the Media Library. The first image found is optionally set as the Featured Image for the post. Inline images will have their source URLs updated. If there's more than one related image, the [ gallery] shortcode is optionally inserted into the post.
 
@@ -27,7 +27,7 @@ Inline and related images will be added to the Media Library. The first image fo
 * `t3i_prepare_content` - Modify `tt_news.bodytext` before import
 	* Example: See `fpjq_t3i_prepare_content` at bottom of `typo3-import.php`
 
-= TYPO3 Importer Options =
+= TYPO3 tt_news Importer Options =
 
 **TYPO3 Access**
 
@@ -135,9 +135,9 @@ Inline and related images will be added to the Media Library. The first image fo
 
 = Install Methods =
 
-* Through WordPress Admin > Plugins > Add New, Search for "TYPO3 Importer"
-	* Find "TYPO3 Importer"
-	* Click "Install Now" of "TYPO3 Importer"
+* Through WordPress Admin > Plugins > Add New, Search for "TYPO3 tt_news Importer"
+	* Find "TYPO3 tt_news Importer"
+	* Click "Install Now" of "TYPO3 tt_news Importer"
 * Download [`typo3-importer.zip`](http://downloads.wordpress.org/plugin/typo3-importer.zip) locally
 	* Through WordPress Admin > Plugins > Add New
 	* Click Upload
@@ -148,13 +148,13 @@ Inline and related images will be added to the Media Library. The first image fo
 
 = Activation Options =
 
-* Activate the "TYPO3 Importer" plugin after uploading
-* Activate the "TYPO3 Importer" plugin through WordPress Admin > Plugins
+* Activate the "TYPO3 tt_news Importer" plugin after uploading
+* Activate the "TYPO3 tt_news Importer" plugin through WordPress Admin > Plugins
 
 = Usage =
 
-1. Set TYPO3 access through WordPress Admin > Settings > TYPO3 Importer
-1. Import via WordPress Admin > Tools > TYPO3 Importer
+1. Set TYPO3 access through WordPress Admin > Settings > TYPO3 tt_news Importer
+1. Import via WordPress Admin > Tools > TYPO3 tt_news Importer
 
 = Upgrading =
 
@@ -176,17 +176,17 @@ Inline and related images will be added to the Media Library. The first image fo
 
 = Still Stuck or Want Something Done? Get Support! =
 
-1. [TYPO3 Importer Knowledge Base](https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs) - read and comment upon frequently asked questions
-1. [Open TYPO3 Importer Issues](https://github.com/michael-cannon/typo3-importer/issues) - review and submit bug reports and enhancement requests
-1. [TYPO3 Importer Support on WordPress](http://wordpress.org/support/plugin/typo3-importer) - ask questions and review responses
-1. [Contribute Code to TYPO3 Importer](https://github.com/michael-cannon/typo3-importer/blob/master/CONTRIBUTING.md)
-1. [Beta Testers Needed](http://axelerant.com/become-beta-tester/) - get the latest TYPO3 Importer version
+1. [TYPO3 tt_news Importer Knowledge Base](https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs) - read and comment upon frequently asked questions
+1. [Open TYPO3 tt_news Importer Issues](https://github.com/michael-cannon/typo3-importer/issues) - review and submit bug reports and enhancement requests
+1. [TYPO3 tt_news Importer Support on WordPress](http://wordpress.org/support/plugin/typo3-importer) - ask questions and review responses
+1. [Contribute Code to TYPO3 tt_news Importer](https://github.com/michael-cannon/typo3-importer/blob/master/CONTRIBUTING.md)
+1. [Beta Testers Needed](http://axelerant.com/become-beta-tester/) - get the latest TYPO3 tt_news Importer version
 
 
 == Screenshots ==
 
-1. Where to find TYPO3 Importer in Tools
-2. TYPO3 Importer settings
+1. Where to find TYPO3 tt_news Importer in Tools
+2. TYPO3 tt_news Importer settings
 3. TYPO3 news entries being imported
 
 [gallery]
