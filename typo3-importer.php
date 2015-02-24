@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: TYPO3 Importer
+ * Plugin Name: TYPO3 tt_news Importer
  * Plugin URI: http://wordpress.org/extend/plugins/typo3-importer/
  * Description: TYPO3 Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
  * Version: 2.3.0RC1
