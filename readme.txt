@@ -211,4 +211,4 @@ TBD
 
 == Thank You ==
 
-Current development by [Michael Cannon](https://profiles.wordpress.org/comprock/) of [Axelerant](http://axelerant.com/about-axelerant/).
+Current development by [Axelerant](http://axelerant.com/about-axelerant/).
