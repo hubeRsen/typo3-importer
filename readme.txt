@@ -1,6 +1,6 @@
 === TYPO3 Importer ===
 
-Contributors: comprock
+Contributors: comprock, saurabhd
 Tags: typo3, import
 Requires at least: 3.5
 Tested up to: 3.5
