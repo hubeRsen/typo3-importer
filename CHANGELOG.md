@@ -1,8 +1,8 @@
-# CHANGELOG TYPO3 tt_news Importer
+# CHANGELOG - TYPO3 tt_news Importer
 
 ## 2.3.0RC1
-* Change brand name
 * Change copyright text
+* Update branding to Axelerant
 
 ## master
 * Add CHANGELOG and CONTRIBUTING documents

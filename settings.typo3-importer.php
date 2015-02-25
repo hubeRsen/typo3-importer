@@ -203,15 +203,20 @@ EOD;
 	 * Description for About section
 	 */
 	public function display_about_section() {
-		
-		echo					<<<EOD
-			<div style="width: 50%;">
-				<p><img class="alignright size-medium" title="Michael in Red Square, Moscow, Russia" src="/wp-content/plugins/typo3-importer/media/michael-cannon-red-square-300x2251.jpg" alt="Michael in Red Square, Moscow, Russia" width="300" height="225" /><a href="http://wordpress.org/extend/plugins/typo3-importer/">TYPO3 tt_news Importer</a> is by <a href="http://axelerant.com/about-axelerant/michael-cannon-resume/">Michael Cannon</a>.</p>
-				<p>Hello, I'm Michael Cannon, <a title="Lot's of stuff about Peichi Liu…" href="http://peimic.com/t/peichi-liu/">Peichi's</a> smiling man, an adventurous <a title="Water rat" href="http://www.chinesehoroscope.org/chinese_zodiac/rat/" target="_blank">water-rat</a>, <a title="Aihrus – ideas programmed real" href="http://aihr.us/">CTO</a>, <a title="Road biker, cyclist, biking; whatever you call, I love to ride" href="http://peimic.com/c/biking/">cyclist</a>, <a title="Michael's poetic like literary ramblings" href="http://peimic.com/t/poetry/">poet</a>, <a title="World Wide Opportunities on Organic Farms" href="http://peimic.com/t/WWOOF/">WWOOF'er</a> and <a title="My traveled to country list, is more than my age." href="http://peimic.com/c/travel/">world traveler</a>.</p>
-				<p>If you like this plugin, <a href="http://axelerant.com/about-axelerant/donate/">please donate</a>.</p>
-			</div>
-EOD;
-		
+	public static function display_about() {
+		$text  = __( '<img class="size-medium" src="%5$s" alt="Axelerant 2015 Retreat in Goa" width="640" height="327" /><p>We at Axelerant have transformed ourselves from being a simple Drupal development company into a thriving incubator for products and services related to DevOps, Drupal, ecommerce, project development, release management, WordPress, and 24/7 support. Inside Axelerant, we focus on talent that’s giving, open, passionate, process oriented, and self­directed. Our clients tend to be design agencies, media publishers, and other IT organizations.</p><h2>Vision</h2><p>Axelerant, making happiness possible</p><h2>Mission</h2><p>We’re an incubator for innovative products and services created to make the world a happier place.</p><h2>Core Values</h2><ul><li><b>Passion</b> – Our passion is so strong, we’re self­directed to make the difficult easy.</li><li><b>Openness</b> – We’re so honest and painstaking in our discussions that there are no questions left, and standards are created.</li><li><b>Giving</b> – We’re excited to share our results to inspire all to surpass them.</li></ul><p>Read more about…</p><ul><li><a href="%1$s">Axelerant Team Members</a></li><li><a href="%2$s">Drupal Give</a></li><li><a href="%3$s">How We Work</a></li><li><a href="%4$s">Testimonials</a></li><li><a href="%6$s">Careers</a></li></ul>' );
+
+		echo '<div id="about" style="width: 70%; min-height: 225px;"><p>';
+		echo sprintf(
+			$text,
+			esc_url( '//axelerant.com/about-axelerant/axelerant-team-members/' ),
+			esc_url( '//www.axelerant.com/drupalgive' ),
+			esc_url( '//axelerant.com/about-axelerant/how-we-work/' ),
+			esc_url( '//axelerant.com/about-axelerant/testimonials/' ),
+			esc_url( '//axelerant.com/wp-content/uploads/2015/02/IGP7228-2015-01-22-at-05-18-02.jpg' ),
+			esc_url( '//axelerant.com/careers/' )
+		);
+		echo '</p></div>';
 	}
 	
 	/**

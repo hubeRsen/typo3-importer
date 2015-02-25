@@ -1,4 +1,4 @@
-# Contribute To TYPO3 tt_news Importer
+# CONTRIBUTE - TYPO3 tt_news Importer
 
 Community made patches, localisation, bug reports and contributions are very welcome and help make TYPO3 tt_news Importer the #1 bulk/quick edit plugin for WordPress.
 
