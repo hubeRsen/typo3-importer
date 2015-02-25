@@ -129,7 +129,7 @@ class T3I_Settings {
 		
 	</form>';
 
-		$copyright				= '<div class="copyright">Copyright %s <a href="http://aihr.us">Aihr.us.</a></div>';
+		$copyright				= '<div class="copyright">Copyright %s <a href="http://axelerant.com/">http://axelerant.com.</a></div>';
 		$copyright				= sprintf( $copyright, date( 'Y' ) );
 		echo					<<<EOD
 				$copyright

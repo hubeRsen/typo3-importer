@@ -509,7 +509,7 @@ EOD;
 
 	</form>
 <?php
-		$copyright				= '<div class="copyright">Copyright %s <a href="http://aihr.us">Aihr.us.</a></div>';
+		$copyright				= '<div class="copyright">Copyright %s <a href="http://axelerant.com/">http://axelerant.com.</a></div>';
 		$copyright				= sprintf( $copyright, date( 'Y' ) );
 		echo $copyright;
 	}
@@ -1571,7 +1571,7 @@ EOD;
 	 * Returns string of a filename or string converted to a spaced extension
 	 * less header type string.
 	 *
-	 * @author Michael Cannon <mc@aihr.us>
+	 * @author Axelerant <http://axelerant.com/>
 	 * @param string filename or arbitrary text
 	 * @return mixed string/boolean
 	 */
