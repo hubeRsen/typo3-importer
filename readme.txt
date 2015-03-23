@@ -1,6 +1,7 @@
 === TYPO3 tt_news Importer ===
 
 Contributors: comprock, saurabhd
+Donate link: http://axelerant.com/about-axelerant/donate/
 Tags: typo3, import
 Requires at least: 3.5
 Tested up to: 3.5
