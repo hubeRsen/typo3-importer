@@ -58,6 +58,8 @@ class TYPO3_Importer {
 	var $typo3_url				= null;
 	var $wpdb					= null;
 
+	static $version = '2.3.0RC1';
+
 	// Plugin initialization
 	function TYPO3_Importer() {
 
