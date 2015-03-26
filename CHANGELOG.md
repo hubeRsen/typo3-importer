@@ -1,6 +1,6 @@
 # CHANGELOG - TYPO3 tt_news Importer
 
-## 2.3.0RC1
+## 2.3.0
 * Add tests
 * Change copyright text
 * Update branding to Axelerant

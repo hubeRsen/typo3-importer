@@ -3,7 +3,7 @@
  * Plugin Name: TYPO3 tt_news Importer
  * Plugin URI: http://wordpress.org/extend/plugins/typo3-importer/
  * Description: TYPO3 tt_news Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress.
- * Version: 2.3.0RC1
+ * Version: 2.3.0
  * Author: Axelerant
  * Author URI: http://axelerant.com/
  * License: GPLv2 or later
@@ -58,7 +58,7 @@ class TYPO3_Importer {
 	var $typo3_url				= null;
 	var $wpdb					= null;
 
-	static $version = '2.3.0RC1';
+	static $version = '2.3.0';
 
 	// Plugin initialization
 	function TYPO3_Importer() {
