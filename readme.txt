@@ -1,7 +1,7 @@
 === TYPO3 tt_news Importer ===
 
-Contributors: comprock, saurabhd
-Donate link: http://axelerant.com/about-axelerant/donate/
+Contributors: comprock,saurabhd,subharanjan
+Donate link: https://axelerant.com/about-axelerant/donate/
 Tags: typo3, import
 Requires at least: 3.9.2
 Tested up to: 4.3.0
@@ -181,7 +181,7 @@ Inline and related images will be added to the Media Library. The first image fo
 1. [Open TYPO3 tt_news Importer Issues](https://github.com/michael-cannon/typo3-importer/issues) - review and submit bug reports and enhancement requests
 1. [TYPO3 tt_news Importer Support on WordPress](http://wordpress.org/support/plugin/typo3-importer) - ask questions and review responses
 1. [Contribute Code to TYPO3 tt_news Importer](https://github.com/michael-cannon/typo3-importer/blob/master/CONTRIBUTING.md)
-1. [Beta Testers Needed](http://axelerant.com/become-beta-tester/) - get the latest TYPO3 tt_news Importer version
+1. [Beta Testers Needed](http://store.axelerant.com/become-beta-tester/) - get the latest TYPO3 tt_news Importer version
 
 
 == Screenshots ==
@@ -212,4 +212,4 @@ TBD
 
 == Thank You ==
 
-Current development by [Axelerant](http://axelerant.com/about-axelerant/).
+Current development by [Axelerant](https://axelerant.com/about-axelerant/).
