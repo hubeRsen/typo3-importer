@@ -816,7 +816,7 @@ EOD;
 
 		$t3db					= new wpdb( $input['t3db_username'], $input['t3db_password'], $input['t3db_name'], $input['t3db_host'] );
 
-		if ( ! is_resource( $t3db->dbh ) ) {
+		if ( empty( $t3db->dbh ) ) {
 			add_settings_error( 't3i-options', 't3db', __('Unable to connect to the database', 'typo3-importer') );
 		}
 
