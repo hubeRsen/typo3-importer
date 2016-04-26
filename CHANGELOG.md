@@ -1,7 +1,7 @@
 # CHANGELOG - TYPO3 tt_news Importer
 
 ## 2.3.2RC1
-* Update store branding
+* RESOLVE #6 Error: Unable to connect to the database
 
 ## 2.3.0
 * Add tests
