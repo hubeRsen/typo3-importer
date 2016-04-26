@@ -1,14 +1,14 @@
-# Copyright (C) 2015 TYPO3 tt_news Importer
+# Copyright (C) 2016 TYPO3 tt_news Importer
 # This file is distributed under the same license as the TYPO3 tt_news Importer package.
 msgid ""
 msgstr ""
 "Project-Id-Version: TYPO3 tt_news Importer 2.3.2\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/typo3-importer\n"
-"POT-Creation-Date: 2015-06-18 18:07:03+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/typo3-importer\n"
+"POT-Creation-Date: 2016-04-26 09:22:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
@@ -45,6 +45,8 @@ msgstr ""
 msgid "TYPO3 tt_news Importer Settings"
 msgstr ""
 
+#. #-#-#-#-#  typo3-importer.pot (TYPO3 tt_news Importer 2.3.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
 #: settings.typo3-importer.php:51 settings.typo3-importer.php:58
 #: typo3-importer.php:108 typo3-importer.php:153
 msgid "TYPO3 tt_news Importer"
@@ -63,7 +65,26 @@ msgid "begin importing"
 msgstr ""
 
 #: settings.typo3-importer.php:206
-msgid "<img class=\"size-medium\" src=\"%5$s\" alt=\"Axelerant 2015 Retreat in Goa\" width=\"640\" height=\"327\" /><p>Axelerant is a full-service software development company that focuses on open-source technologies. Top technical talent who are passionate, giving, and communicative demonstrates our backbone. We provide high-end Strategy, Implementation, and Support services for our clients and agencies with whom we partner.</p><p>Our team members span the world, and we follow agile delivery and working processes. Further, we’re actively giving back to many open-source communities and have fostered an innovative, incubator culture to give ideas a chance to succeed.</p><h2>Foundations of Axelerant</h2><ul><li><b>Passion</b> – Our passion is so strong, we’re self­directed to make the difficult easy.</li><li><b>Openness</b> – We’re so honest and painstaking in our discussions that there are no questions left, and standards are created.</li><li><b>Giving</b> – We’re excited to share our results to inspire all to surpass them.</li></ul><h3>Learn More About Axelerant</h3><ul><li><a href=\"%1$s\">Axelerant Team</a></li><li><a href=\"%2$s\">Giving Back</a></li><li><a href=\"%7$s\">Inside Axelerant</a></li><li><a href=\"%3$s\">Our Services</a></li><li><a href=\"%4$s\">Testimonials</a></li><li><a href=\"%6$s\">Careers</a></li></ul>"
+msgid ""
+"<img class=\"size-medium\" src=\"%5$s\" alt=\"Axelerant 2015 Retreat in Goa"
+"\" width=\"640\" height=\"327\" /><p>Axelerant is a full-service software "
+"development company that focuses on open-source technologies. Top technical "
+"talent who are passionate, giving, and communicative demonstrates our "
+"backbone. We provide high-end Strategy, Implementation, and Support services "
+"for our clients and agencies with whom we partner.</p><p>Our team members "
+"span the world, and we follow agile delivery and working processes. Further, "
+"we’re actively giving back to many open-source communities and have fostered "
+"an innovative, incubator culture to give ideas a chance to succeed.</"
+"p><h2>Foundations of Axelerant</h2><ul><li><b>Passion</b> – Our passion is "
+"so strong, we’re self­directed to make the difficult easy.</"
+"li><li><b>Openness</b> – We’re so honest and painstaking in our discussions "
+"that there are no questions left, and standards are created.</"
+"li><li><b>Giving</b> – We’re excited to share our results to inspire all to "
+"surpass them.</li></ul><h3>Learn More About Axelerant</h3><ul><li><a href="
+"\"%1$s\">Axelerant Team</a></li><li><a href=\"%2$s\">Giving Back</a></"
+"li><li><a href=\"%7$s\">Inside Axelerant</a></li><li><a href=\"%3$s\">Our "
+"Services</a></li><li><a href=\"%4$s\">Testimonials</a></li><li><a href=\"%6$s"
+"\">Careers</a></li></ul>"
 msgstr ""
 
 #: settings.typo3-importer.php:314
@@ -155,7 +176,8 @@ msgid "Insert More Link?"
 msgstr ""
 
 #: settings.typo3-importer.php:409
-msgid "Denote where the &lt;--more--&gt; link is be inserted into post content."
+msgid ""
+"Denote where the &lt;--more--&gt; link is be inserted into post content."
 msgstr ""
 
 #: settings.typo3-importer.php:413 settings.typo3-importer.php:442
@@ -215,7 +237,9 @@ msgid "Insert Gallery Shortcode?"
 msgstr ""
 
 #: settings.typo3-importer.php:438
-msgid "Inserts [gallery] into post content if news record has related images. Follows more link if insert points match."
+msgid ""
+"Inserts [gallery] into post content if news record has related images. "
+"Follows more link if insert points match."
 msgstr ""
 
 #: settings.typo3-importer.php:453
@@ -267,7 +291,9 @@ msgid "Related Files Wrap"
 msgstr ""
 
 #: settings.typo3-importer.php:482
-msgid "Useful for adding membership oriented shortcodes around premium content. \"|\" separates before and after content. e.g. [paid]|[/paid]"
+msgid ""
+"Useful for adding membership oriented shortcodes around premium content. \"|"
+"\" separates before and after content. e.g. [paid]|[/paid]"
 msgstr ""
 
 #: settings.typo3-importer.php:488
@@ -287,7 +313,9 @@ msgid "Related Links Wrap"
 msgstr ""
 
 #: settings.typo3-importer.php:512
-msgid "Useful for adding membership oriented shortcodes around premium content. \"|\" separates before and after content. e.g. [member]|[/member]"
+msgid ""
+"Useful for adding membership oriented shortcodes around premium content. \"|"
+"\" separates before and after content. e.g. [member]|[/member]"
 msgstr ""
 
 #: settings.typo3-importer.php:518
@@ -323,7 +351,8 @@ msgid "Don't Import Media"
 msgstr ""
 
 #: settings.typo3-importer.php:551
-msgid "Skips importing any related images and other media files of news records."
+msgid ""
+"Skips importing any related images and other media files of news records."
 msgstr ""
 
 #: settings.typo3-importer.php:558
@@ -339,7 +368,9 @@ msgid "Debug Mode"
 msgstr ""
 
 #: settings.typo3-importer.php:567
-msgid "Bypass Ajax controller to handle `news_to_import` directly for testing purposes"
+msgid ""
+"Bypass Ajax controller to handle `news_to_import` directly for testing "
+"purposes"
 msgstr ""
 
 #: settings.typo3-importer.php:575
@@ -351,15 +382,21 @@ msgid "A quick way to hide imported live posts."
 msgstr ""
 
 #: settings.typo3-importer.php:581
-msgid "This will remove ALL posts imported with the 't3:tt_news.uid' meta key. Related post media and comments will also be deleted."
+msgid ""
+"This will remove ALL posts imported with the 't3:tt_news.uid' meta key. "
+"Related post media and comments will also be deleted."
 msgstr ""
 
 #: settings.typo3-importer.php:582
-msgid "This will remove ALL comments imported with the 't3:tx_comments' comment_agent key."
+msgid ""
+"This will remove ALL comments imported with the 't3:tx_comments' "
+"comment_agent key."
 msgstr ""
 
 #: settings.typo3-importer.php:583
-msgid "This will remove ALL media without a related post. It's possible for non-imported media to be deleted."
+msgid ""
+"This will remove ALL media without a related post. It's possible for non-"
+"imported media to be deleted."
 msgstr ""
 
 #: settings.typo3-importer.php:588
@@ -383,7 +420,9 @@ msgid "Reset plugin"
 msgstr ""
 
 #: settings.typo3-importer.php:604
-msgid "Check this box and click \"Save Changes\" below to reset plugin options to their defaults."
+msgid ""
+"Check this box and click \"Save Changes\" below to reset plugin options to "
+"their defaults."
 msgstr ""
 
 #: settings.typo3-importer.php:610
@@ -391,7 +430,9 @@ msgid "News WHERE Clause"
 msgstr ""
 
 #: settings.typo3-importer.php:611
-msgid "WHERE clause used to select news records from TYPO3. 'AND' must be the first part. e.g.: AND tt_news.deleted = 0 AND tt_news.pid > 0"
+msgid ""
+"WHERE clause used to select news records from TYPO3. 'AND' must be the first "
+"part. e.g.: AND tt_news.deleted = 0 AND tt_news.pid > 0"
 msgstr ""
 
 #: settings.typo3-importer.php:618
@@ -399,7 +440,9 @@ msgid "News ORDER Clause"
 msgstr ""
 
 #: settings.typo3-importer.php:619
-msgid "ORDER clause used to select news records from TYPO3. e.g.: ORDER BY tt_news.uid ASC"
+msgid ""
+"ORDER clause used to select news records from TYPO3. e.g.: ORDER BY tt_news."
+"uid ASC"
 msgstr ""
 
 #: settings.typo3-importer.php:626
@@ -407,7 +450,9 @@ msgid "News to Import"
 msgstr ""
 
 #: settings.typo3-importer.php:627
-msgid "A CSV list of news uids to import, like '1,2,3'. Overrides 'News WHERE Clause'."
+msgid ""
+"A CSV list of news uids to import, like '1,2,3'. Overrides 'News WHERE "
+"Clause'."
 msgstr ""
 
 #: settings.typo3-importer.php:633
@@ -415,7 +460,9 @@ msgid "Categories to Import"
 msgstr ""
 
 #: settings.typo3-importer.php:634
-msgid "A CSV list of news category uids to import, like '1,2,3'. Overrides 'News WHERE Clause'."
+msgid ""
+"A CSV list of news category uids to import, like '1,2,3'. Overrides 'News "
+"WHERE Clause'."
 msgstr ""
 
 #: settings.typo3-importer.php:640
@@ -523,7 +570,8 @@ msgid "No TYPO3 news imports found to mark as 'Private'."
 msgstr ""
 
 #: settings.typo3-importer.php:993
-msgid "Successfully removed %s TYPO3 news and their related media and comments."
+msgid ""
+"Successfully removed %s TYPO3 news and their related media and comments."
 msgstr ""
 
 #: settings.typo3-importer.php:1009
@@ -571,7 +619,12 @@ msgid "Please review your %s before proceeding."
 msgstr ""
 
 #: typo3-importer.php:342
-msgid "Please be patient while news and comment records are processed. This can take a while, up to 2 minutes per individual news record to include comments and related media. Do not navigate away from this page until this script is done or the import will not be completed. You will be notified via this page when the import is completed."
+msgid ""
+"Please be patient while news and comment records are processed. This can "
+"take a while, up to 2 minutes per individual news record to include comments "
+"and related media. Do not navigate away from this page until this script is "
+"done or the import will not be completed. You will be notified via this page "
+"when the import is completed."
 msgstr ""
 
 #: typo3-importer.php:344
@@ -583,11 +636,16 @@ msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
 msgstr ""
 
 #: typo3-importer.php:350
-msgid "All done! %1$s tt_news records were successfully processed in %2$s seconds and there were %3$s failure(s). To try importing the failed records again, <a href=\"%4$s\">click here</a>. %5$s"
+msgid ""
+"All done! %1$s tt_news records were successfully processed in %2$s seconds "
+"and there were %3$s failure(s). To try importing the failed records again, "
+"<a href=\"%4$s\">click here</a>. %5$s"
 msgstr ""
 
 #: typo3-importer.php:352
-msgid "All done! %1$s tt_news records were successfully processed in %2$s seconds and there were no failures. %3$s"
+msgid ""
+"All done! %1$s tt_news records were successfully processed in %2$s seconds "
+"and there were no failures. %3$s"
 msgstr ""
 
 #: typo3-importer.php:355 typo3-importer.php:510
@@ -619,19 +677,30 @@ msgid "Stopping, please wait a moment."
 msgstr ""
 
 #: typo3-importer.php:488
-msgid "Use this tool to import tt_news and tx_comments records from TYPO3 into WordPress."
+msgid ""
+"Use this tool to import tt_news and tx_comments records from TYPO3 into "
+"WordPress."
 msgstr ""
 
 #: typo3-importer.php:490
-msgid "Requires remote web and database access to the source TYPO3 instance. Images, files and comments related to TYPO3 tt_news entries will be pulled into WordPress as new posts."
+msgid ""
+"Requires remote web and database access to the source TYPO3 instance. "
+"Images, files and comments related to TYPO3 tt_news entries will be pulled "
+"into WordPress as new posts."
 msgstr ""
 
 #: typo3-importer.php:492
-msgid "Comments will be automatically tested for spam via Askimet if you have it configured."
+msgid ""
+"Comments will be automatically tested for spam via Askimet if you have it "
+"configured."
 msgstr ""
 
 #: typo3-importer.php:494
-msgid "Inline and related images will be added to the Media Library. The first image found will be set as the Featured Image for the post. Inline images will have their source URLs updated. Related images will be converted to a [gallery] and appended or inserted into the post per your settings."
+msgid ""
+"Inline and related images will be added to the Media Library. The first "
+"image found will be set as the Featured Image for the post. Inline images "
+"will have their source URLs updated. Related images will be converted to a "
+"[gallery] and appended or inserted into the post per your settings."
 msgstr ""
 
 #: typo3-importer.php:496
@@ -639,15 +708,22 @@ msgid "Files will be appended to post content as 'Related Files'."
 msgstr ""
 
 #: typo3-importer.php:498
-msgid "It's possible to change post statuses on import. However, draft posts, will remain as drafts."
+msgid ""
+"It's possible to change post statuses on import. However, draft posts, will "
+"remain as drafts."
 msgstr ""
 
 #: typo3-importer.php:500
-msgid "If you import TYPO3 news and they've gone live when you didn't want them to, visit the Settings screen and look for `Oops`. That's the option to convert imported posts to `Private` thereby removing them from public view."
+msgid ""
+"If you import TYPO3 news and they've gone live when you didn't want them to, "
+"visit the Settings screen and look for `Oops`. That's the option to convert "
+"imported posts to `Private` thereby removing them from public view."
 msgstr ""
 
 #: typo3-importer.php:502
-msgid "Finally, it's possible to delete prior imports and lost comments and attachments."
+msgid ""
+"Finally, it's possible to delete prior imports and lost comments and "
+"attachments."
 msgstr ""
 
 #: typo3-importer.php:506
@@ -663,14 +739,15 @@ msgid "Failed import: %s isn't a TYPO3 news record."
 msgstr ""
 
 #: typo3-importer.php:572
-msgid "&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds."
+msgid ""
+"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
+"successfully processed in %4$s seconds."
 msgstr ""
 
 #: typo3-importer.php:1562
-msgid "&quot;%1$s&quot; Post ID %2$s failed to be processed. The error message was: %3$s"
-msgstr ""
-#. Plugin Name of the plugin/theme
-msgid "TYPO3 tt_news Importer"
+msgid ""
+"&quot;%1$s&quot; Post ID %2$s failed to be processed. The error message was: "
+"%3$s"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -678,7 +755,9 @@ msgid "http://wordpress.org/extend/plugins/typo3-importer/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "TYPO3 tt_news Importer easily imports thousands of tt_news and tx_comments from TYPO3 into WordPress."
+msgid ""
+"TYPO3 tt_news Importer easily imports thousands of tt_news and tx_comments "
+"from TYPO3 into WordPress."
 msgstr ""
 
 #. Author of the plugin/theme
