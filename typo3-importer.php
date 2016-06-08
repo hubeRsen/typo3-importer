@@ -28,6 +28,8 @@
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+// we need more memory ya
+ini_set( 'memory_limit', '512M' );
 
 // Load dependencies
 // TYPO3 includes for helping parse typolink tags
@@ -50,6 +52,10 @@ class TYPO3_Importer {
 	var $newline_wp				= "\n\n";
 	var $post_status_options	= array( 'draft', 'publish', 'pending', 'future', 'private' );
 	var $postmap				= array();
+
+	/**
+	 * @var wpdb $t3db
+	 */
 	var $t3db					= null;
 	var $t3db_host				= null;
 	var $t3db_name				= null;
@@ -779,6 +785,29 @@ EOD;
 		// TYPO3 stores bodytext usually in psuedo HTML
 		$post_content			= $this->_prepare_content( $news['bodytext'] );
 
+		// Check for empty contents, typo3 is crazy awesomeness and links news to pages and contents and subpages and stuff and nice whoop
+		if ( empty( $post_content ) && $news['page'] ) {
+
+			// Get the content record from tt_content if exist.
+			$r = $this->t3db->get_results( "SELECT * FROM tt_content WHERE sys_language_uid = {$news['sys_language_uid']} AND colPos = 0 AND pid = {$news['page']}");
+			if ( $r ) {
+				foreach ( $r as $item ) {
+					$post_content .= $this->_prepare_content( $item->bodytext );
+				}
+			}
+		} elseif ( empty( $post_content ) && $news['type'] == '1' && $news['t3_origuid'] ) {
+
+			$row = $this->t3db->get_row( "SELECT * FROM tt_news WHERE uid = {$news['t3_origuid']}" );
+			if ( $row && $row->page ) {
+				$r = $this->t3db->get_results( "SELECT * FROM tt_content WHERE sys_language_uid = {$news['sys_language_uid']} AND colPos = 0 AND pid = {$row->page}");
+				if ( $r ) {
+					foreach ( $r as $item ) {
+						$post_content .= $this->_prepare_content( $item->bodytext );
+					}
+				}
+			}
+		}
+
 		// Handle any tags associated with the post
 		$tags_input				= ! empty( $news['props']['keywords'] ) ? $news['props']['keywords'] : '';
 
@@ -800,6 +829,14 @@ EOD;
 		} else {
 			$postdata['ID']		= $post_id;
 			$post_id			= wp_update_post( $postdata );
+		}
+
+		// External links.
+		if ( $news['type'] == '2' ) {
+
+			$url = $news['ext_url'];
+			update_post_meta( $post_id, '_links_to', $url );
+
 		}
 
 		/**
@@ -1450,7 +1487,11 @@ EOD;
 				n.news_files,
 				n.links,
 				n.sys_language_uid,
-				n.l18n_parent
+				n.l18n_parent,
+				n.t3_origuid,
+				n.page,
+				n.type,
+				n.ext_url
 			FROM tt_news n
 			WHERE 1 = 1
 				AND n.uid = {$uid}
