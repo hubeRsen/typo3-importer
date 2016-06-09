@@ -28,6 +28,8 @@
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+// we need more memory ya
+ini_set( 'memory_limit', '512M' );
 
 // Load dependencies
 // TYPO3 includes for helping parse typolink tags
@@ -50,6 +52,10 @@ class TYPO3_Importer {
 	var $newline_wp				= "\n\n";
 	var $post_status_options	= array( 'draft', 'publish', 'pending', 'future', 'private' );
 	var $postmap				= array();
+
+	/**
+	 * @var wpdb $t3db
+	 */
 	var $t3db					= null;
 	var $t3db_host				= null;
 	var $t3db_name				= null;
@@ -79,14 +85,46 @@ class TYPO3_Importer {
 		add_action( 'wp_ajax_importtypo3news', array( &$this, 'ajax_process_news' ) );
 		add_filter( 'plugin_action_links', array( &$this, 'add_plugin_action_links' ), 10, 2 );
 		add_filter( 'admin_init', array( &$this, 'admin_init' ) );
+		add_action( 'admin_init', array( $this, 'pll_language_relations' ) );
 		
 		$this->options_link		= '<a href="'.get_admin_url().'options-general.php?page=t3i-options">'.__('Settings', 'typo3-importer').'</a>';
         
 	}
 
-
+	/**
+	 *
+	 */
 	function admin_init() {
 		$this->no_media_import	= get_t3i_options( 'no_media_import' );
+	}
+
+	/**
+	 *
+	 */
+	function pll_language_relations() {
+		global $wpdb;
+		if ( isset( $_GET['languagerelations'] ) && $_GET['languagerelations'] === 'yes' ) {
+
+			$lang_relations = array();
+
+			$results = $wpdb->get_results( "SELECT * FROM {$wpdb->postmeta} WHERE meta_key LIKE 't3:tt_news.l18n_parent'" );
+
+			foreach ( $results as $r ) {
+
+				if ( ! array_key_exists( $r->meta_value, $lang_relations ) ) {
+					$lang_relations[$r->meta_value] = array(
+						'de' => $r->meta_value
+					);
+				}
+
+				$l = pll_get_post_language( $r->post_id );
+				$lang_relations[$r->meta_value][$l] = $r->post_id;
+			}
+
+			foreach ( $lang_relations as $l ) {
+				pll_save_post_translations( $l );
+			}
+		}
 	}
 
 
@@ -747,6 +785,29 @@ EOD;
 		// TYPO3 stores bodytext usually in psuedo HTML
 		$post_content			= $this->_prepare_content( $news['bodytext'] );
 
+		// Check for empty contents, typo3 is crazy awesomeness and links news to pages and contents and subpages and stuff and nice whoop
+		if ( empty( $post_content ) && $news['page'] ) {
+
+			// Get the content record from tt_content if exist.
+			$r = $this->t3db->get_results( "SELECT * FROM tt_content WHERE sys_language_uid = {$news['sys_language_uid']} AND colPos = 0 AND pid = {$news['page']}");
+			if ( $r ) {
+				foreach ( $r as $item ) {
+					$post_content .= $this->_prepare_content( $item->bodytext );
+				}
+			}
+		} elseif ( empty( $post_content ) && $news['type'] == '1' && $news['t3_origuid'] ) {
+
+			$row = $this->t3db->get_row( "SELECT * FROM tt_news WHERE uid = {$news['t3_origuid']}" );
+			if ( $row && $row->page ) {
+				$r = $this->t3db->get_results( "SELECT * FROM tt_content WHERE sys_language_uid = {$news['sys_language_uid']} AND colPos = 0 AND pid = {$row->page}");
+				if ( $r ) {
+					foreach ( $r as $item ) {
+						$post_content .= $this->_prepare_content( $item->bodytext );
+					}
+				}
+			}
+		}
+
 		// Handle any tags associated with the post
 		$tags_input				= ! empty( $news['props']['keywords'] ) ? $news['props']['keywords'] : '';
 
@@ -768,6 +829,45 @@ EOD;
 		} else {
 			$postdata['ID']		= $post_id;
 			$post_id			= wp_update_post( $postdata );
+		}
+
+		// External links.
+		if ( $news['type'] == '2' ) {
+
+			$url = $news['ext_url'];
+			update_post_meta( $post_id, '_links_to', $url );
+
+		}
+
+		/**
+		 * When polylang is installed, add the correct language to posts
+		 */
+		if ( defined( 'POLYLANG_VERSION' ) ) {
+
+			$t3_languages = array(
+				'0' => 'de',
+				'1' => 'it',
+				'2' => 'rm',
+				'3' => 'fr',
+				'4' => 'en'
+			);
+
+			if ( ! array_key_exists( $news['sys_language_uid'], $t3_languages ) ) {
+				$lang = 'de';
+			} else {
+				$lang = $t3_languages[ $news['sys_language_uid'] ];
+			}
+
+			// Set post language.
+			pll_set_post_language( $post_id, $lang );
+
+			// Set the language relations.
+			/*if ( ! empty( $news['l18n_parent'] && $news['l18n_parent'] != '0' ) ) {
+				pll_save_post_translations( array(
+					'de' => $this->get_wp_post_ID( $news['l18n_parent'] ),
+					$lang => $post_id
+				) );
+			}*/
 		}
 
 		if ( is_wp_error( $post_id ) ) {
@@ -823,6 +923,10 @@ EOD;
 					case 'links':
 						// not possible to do blogroll link inserts, so format and append
 						$this->_typo3_append_links( $post_id, $value );
+						break;
+
+					case 'l18n_parent':
+						update_post_meta( $post_id, 't3:tt_news.l18n_parent', $this->get_wp_post_ID( $value ) );
 						break;
 
 					default:
@@ -1381,7 +1485,13 @@ EOD;
 				n.image,
 				n.imagecaption,
 				n.news_files,
-				n.links
+				n.links,
+				n.sys_language_uid,
+				n.l18n_parent,
+				n.t3_origuid,
+				n.page,
+				n.type,
+				n.ext_url
 			FROM tt_news n
 			WHERE 1 = 1
 				AND n.uid = {$uid}
@@ -1420,6 +1530,9 @@ EOD;
 
 		$row['props']['links']			= $row['links'];
 		unset($row['links']);
+
+		$row['props']['l18n_parent']    = $row['l18n_parent'];
+		unset($row['l18n_parent']);
 
 		$row['props']['slug']			= $this->_typo3_api_news_slug($row['itemid']);
 
