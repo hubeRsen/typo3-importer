@@ -63,6 +63,7 @@ class TYPO3_Importer {
 	var $t3db_username			= null;
 	var $typo3_url				= null;
 	var $wpdb					= null;
+	var $ph_languages           = array();
 
 	static $version = '2.3.2';
 
@@ -75,6 +76,14 @@ class TYPO3_Importer {
 
 		if ( ! function_exists( 'admin_url' ) )
 			return false;
+
+		$this->ph_languages = array(
+			'0' => 'de',
+			'1' => 'it',
+			'2' => 'rm',
+			'3' => 'fr',
+			'4' => 'en'
+		);
 
 		// Load up the localization file if we're using WordPress in a different language
 		// Place it in this plugin's "localization" folder and name it "typo3-importer-[value in wp-config].mo"
@@ -568,6 +577,11 @@ EOD;
 		// grab the record from TYPO3
 		$news					= $this->get_news( $this->news_uid );
 
+		// Check if this news is in the supported languages
+		if ( ! array_key_exists( $news['sys_language_uid'], $this->ph_languages ) ) {
+			die( json_encode( array( 'error' => sprintf( __( "Failed import: %s isn't in a supported language.", 'typo3-importer' ), esc_html( $_REQUEST['id'] ) ) ) ) );
+		}
+
 		if ( ! is_array( $news ) || $news['itemid'] != $this->news_uid )
 			die( json_encode( array( 'error' => sprintf( __( "Failed import: %s isn't a TYPO3 news record.", 'typo3-importer' ), esc_html( $_REQUEST['id'] ) ) ) ) );
 
@@ -844,13 +858,7 @@ EOD;
 		 */
 		if ( defined( 'POLYLANG_VERSION' ) ) {
 
-			$t3_languages = array(
-				'0' => 'de',
-				'1' => 'it',
-				'2' => 'rm',
-				'3' => 'fr',
-				'4' => 'en'
-			);
+			$t3_languages = $this->ph_languages;
 
 			if ( ! array_key_exists( $news['sys_language_uid'], $t3_languages ) ) {
 				$lang = 'de';
