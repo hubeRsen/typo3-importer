@@ -577,9 +577,13 @@ EOD;
 		// grab the record from TYPO3
 		$news					= $this->get_news( $this->news_uid );
 
+		if ( $news['deleted'] == '1' || $news['hidden'] == '1' ) {
+			die( json_encode( array( 'error' => sprintf( __( "Excluded: %s is hidden or deleted.", 'typo3-importer' ), esc_html( $_REQUEST['id'] ) ) ) ) );
+		}
+
 		// Check if this news is in the supported languages
 		if ( ! array_key_exists( $news['sys_language_uid'], $this->ph_languages ) ) {
-			die( json_encode( array( 'error' => sprintf( __( "Failed import: %s isn't in a supported language.", 'typo3-importer' ), esc_html( $_REQUEST['id'] ) ) ) ) );
+			die( json_encode( array( 'error' => sprintf( __( "Excluded: %s isn't in a supported language.", 'typo3-importer' ), esc_html( $_REQUEST['id'] ) ) ) ) );
 		}
 
 		if ( ! is_array( $news ) || $news['itemid'] != $this->news_uid )
